@@ -11,19 +11,19 @@ document.addEventListener("DOMContentLoaded", function() {
 
         let isValid = true;
 
-        let message = [];
+        let messages = [];
 
         if (username.length <3){
-            isValid =false;
-            message.push("Username must be at least 3 characters long.");
+            isValid = false;
+            messages.push("Username must be at least 3 characters long.");
         }
         if (!email.includes(".") || !email.includes("@")) {
             isValid = false;
-            message.push("Please enter a valid email address.");
+            messages.push("Please enter a valid email address.");
         }
         if (password.length < 8) {
             isValid = false;
-            message.push("Password must be at least 8 characters long.");
+            messages.push("Password must be at least 8 characters long.");
         }
         if (isValid) {
             feedbackDiv.textContent = "Registration successful!";
