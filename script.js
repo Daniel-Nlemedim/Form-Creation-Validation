@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function() {
             isValid =false;
             message.push("Username must be at least 3 characters long.");
         }
-        if (email.includes(".") && !email.includes("@")) {
+        if (!email.includes(".") || !email.includes("@")) {
             isValid = false;
             message.push("Please enter a valid email address.");
         }
@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function() {
             isValid = false;
             message.push("Password must be at least 8 characters long.");
         }
-        if (isValid == true) {
+        if (isValid) {
             feedbackDiv.textContent = "Registration successful!";
             feedbackDiv.style.display = "block";
             feedbackDiv.style.color = "#28a745"; // Green color for success
