@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function() {
             feedbackDiv.style.display = "block";
             feedbackDiv.style.color = "#28a745"; // Green color for success
         } else {
-            feedbackDiv.innerHTML = message.join("<br>"); 
+            feedbackDiv.innerHTML = messages.join("<br>"); 
             feedbackDiv.style.display = "block";
             feedbackDiv.style.color = "#dc3545"; // Red color for error
         }
